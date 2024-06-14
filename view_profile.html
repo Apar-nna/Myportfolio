@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile View</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ profile.user.username }}'s Profile</h1>
+        <p>Bio: {{ profile.bio }}</p>
+        <p>Skills: {{ profile.skills }}</p>
+        <p>Contact: {{ profile.contact_details }}</p>
+    </div>
+</body>
+</html>

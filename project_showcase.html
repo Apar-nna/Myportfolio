@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Showcase</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container" >
+        <h1>Project Showcase</h1>
+        {% for item in portfolio_items %}
+            <div >
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.description }}</p>
+                <img src="{{ item.image.url }}" alt="Rounded Image" style="border-radius: 50%; width: 80px; height: 80px;">
+                  <br>
+                 <p>{{ item.link }}</p>
+                <br>
+                 <p>{{ item.project_description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
